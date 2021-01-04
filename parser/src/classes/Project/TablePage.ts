@@ -12,7 +12,9 @@ export default class TablePage {
 	readonly fields?: FieldInfo[];
 	readonly realm?: string;
 	readonly internal?: boolean;
-
+	readonly deprecated?: boolean;
+	readonly stub?: boolean;
+	
 	constructor(
 		public readonly name: string,
 		public readonly description?: string,
@@ -29,6 +31,14 @@ export default class TablePage {
 		this.realm = get_unique(block, "realm");
 		this.internal =
 			get_unique(block, "internal") === "true"
+			? true
+			: undefined;
+		this.deprecated =
+			get_unique(block, "deprecated") === "true"
+			? true
+			: undefined;
+		this.stub =
+			get_unique(block, "stub") === "true"
 			? true
 			: undefined;
 

@@ -29,6 +29,8 @@ export interface FunctionPage {
 	examples?: string[];
 	realm?: string;
 	internal?: boolean;
+	deprecated?: boolean;
+	stub?: boolean;
 	item: "function";
 }
 
@@ -44,6 +46,8 @@ export interface TablePage {
 	fields?: FieldInfo[];
 	realm?: string;
 	internal?: boolean;
+	deprecated?: boolean;
+	stub?: boolean;
 	item: "table";
 }
 

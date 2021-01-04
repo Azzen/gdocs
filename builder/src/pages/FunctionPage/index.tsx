@@ -29,6 +29,8 @@ const FunctionPage: React.FC<{}> = () => {
 	const returns: FunctionReturns[] = item.returns ?? [];
 	const realm = item.realm
 	const internal = item.internal
+	const deprecated = item.deprecated
+	const stub = item.stub
 
 	if (internal) {
 		const internalMessage =
@@ -37,6 +39,24 @@ const FunctionPage: React.FC<{}> = () => {
 		description = description
 			? `${description}\n\n${internalMessage}`
 			: internalMessage;
+	}
+
+	if (deprecated) {
+		const deprecatedMessage =
+			"**We advice agains't using this. It may be changed or removed in a future update.**";
+
+		description = description
+			? `${description}\n\n${deprecatedMessage}`
+			: deprecatedMessage;
+	}
+
+	if (stub) {
+		const stubMessage =
+			"**This article is a stub.**";
+
+		description = description
+			? `${description}\n\n${stubMessage}`
+			: stubMessage;
 	}
 
 	function markedDescription() {
