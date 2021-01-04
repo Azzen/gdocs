@@ -68,8 +68,8 @@ interface MenuContainerProps {
 }
 
 export const MenuContainer = styled.div<MenuContainerProps>`
-	width: 25.6rem;
-	max-width: ${({ active }) => (active ? "25.6rem" : "0")};
+	width: 35rem;
+	max-width: ${({ active }) => (active ? "35rem" : "0")};
 	overflow-x: hidden;
 	transition: max-width 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	padding-top: 0.4rem;
@@ -90,7 +90,7 @@ export const MenuContainer = styled.div<MenuContainerProps>`
 	}
 
 	> * {
-		width: 25.6rem;
+		width: 35rem;
 	}
 
 	> a:first-child {
