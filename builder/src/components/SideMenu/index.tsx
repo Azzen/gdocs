@@ -70,9 +70,11 @@ const SideMenu: React.FC<{}> = () => {
 									)
 									.map((item) => {
 										const label = clear_label(item.name);
-
 										return {
 											label: label,
+											internal: item.internal,
+											stub: item.stub,
+											deprecated: item.deprecated,
 											key: `${key}-${item.name}`,
 											link: `/${activeTab}/${subcategory.name}/${item.name}`,
 										};

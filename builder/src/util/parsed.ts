@@ -60,6 +60,9 @@ export interface Category {
 	subcategories: {
 		[key: string]: ValidSubcategory;
 	};
+	internal?: boolean;
+	deprecated?: boolean;
+	stub?: boolean;
 	item: "category";
 }
 
