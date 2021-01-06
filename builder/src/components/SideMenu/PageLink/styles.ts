@@ -28,3 +28,25 @@ export const Container = styled.div<ContainerProps>`
 		user-select: none;
 	}
 `;
+
+export interface BadgeProps {
+	internal?: boolean;
+	stub?: boolean;
+	deprecated?: boolean;
+}
+
+export const Badge = styled.span<BadgeProps>`
+	display: inline-block;
+	padding: .05em .4em;
+	font-size: 75% !important;
+	font-weight: 700 !important;
+	line-height: 1 !important;
+	text-align:center;
+	white-space: nowrap;
+	border-radius: .25rem;
+	color: #fff;
+	margin-left 0.5em;
+	background-color: ${({ theme, internal, stub, deprecated}) => 
+		internal ? theme.badges.internal : (stub ? theme.badges.stub : (deprecated ? theme.badges.deprecated : "#000"))
+	};
+`

@@ -42,5 +42,10 @@ export const light: DefaultTheme = {
 	table: {
 		background: "rgba(0, 0, 0, 0.3)",
 		alternative: "rgba(0, 0, 0, 0.5)"
+	},
+	badges: {
+		internal: "#919191",
+		stub: "#03a1fc",
+		deprecated: "#fc6b03",
 	}
 };

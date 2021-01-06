@@ -43,6 +43,11 @@ declare module "styled-components" {
 		table: {
 			background: string;
 			alternative: string;
+		},
+		badges: {
+			internal: string;
+			stub: string;
+			deprecated: string;
 		}
 	}
 }

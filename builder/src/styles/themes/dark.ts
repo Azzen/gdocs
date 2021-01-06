@@ -62,5 +62,10 @@ export const dark: DefaultTheme = {
 	table: {
 		background: backgroundPalette[16],
 		alternative: backgroundPalette[8]
+	},
+	badges: {
+		internal: "#919191",
+		stub: "#03a1fc",
+		deprecated: "#fc6b03",
 	}
 };
